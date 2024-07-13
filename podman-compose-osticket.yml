@@ -1,0 +1,21 @@
+version: '2.1'
+services:
+    mariadb:
+      image: mariadb:latest
+      container_name: mariadb
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: osticket
+        MYSQL_USER: osticket
+        MYSQL_PASSWORD: osticket_password
+      ports:
+        - "30000:3306"
+      # volumes:
+      #   - mariadb_data:/var/lib/mysql
+
+    osticket:
+        image: eveanwarl0ck/osticket_1_18_x:0.1
+        restart: always
+        ports:
+            - "8080:80"
+        

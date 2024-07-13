@@ -1,6 +1,9 @@
+# VERSION 1.0.0
+# DESCRIPTION: ubi8, php 8.2, osticket 1.18.x
+# DOCKER_HUB_REPOSITORY: eveanwarl0ck/osticket_1_18_x
 FROM registry.access.redhat.com/ubi8/ubi
 
-LABEL maintainer="evean.warlock@gmail.com"
+LABEL maintainer="0zymandia5"
 
 ENV OSTICKET_VERSION=1.18.x
 ENV OSTICKET_HOME=/var/www/html/osTicket
