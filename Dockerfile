@@ -21,6 +21,7 @@ RUN dnf install -y httpd \
     php-json \
     php-fpm \
     git \
+    nc \
     && dnf clean all
 
 # Copy the configuration file for PHP and HTTPD

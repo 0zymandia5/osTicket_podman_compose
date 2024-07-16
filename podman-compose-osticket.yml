@@ -9,7 +9,8 @@ services:
         MYSQL_USER: osticket
         MYSQL_PASSWORD: osticket_password
       ports:
-        - "30000:3306"
+        - "3307:3306"
+      command: --bind-address=mariadb
       # volumes:
       #   - mariadb_data:/var/lib/mysql
 

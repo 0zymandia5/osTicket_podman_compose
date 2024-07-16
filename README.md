@@ -9,9 +9,7 @@ This repository provides a Podman Compose setup for running osTicket, an open-so
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Customization](#customization)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -39,6 +37,26 @@ Before getting started, ensure you have the following installed:
    git clone https://github.com/0zymandia5/osTicket_podman_compose.git
    cd osTicket_podman_compose
 
-## License
+   ```
+
+## Usage
+
+```
+podman-compose -f podman-compose-osticket.yml up mariadb osticket
+```
+
+To build locally the osTicket image:
+
+```
+podman build -t <tag_name> .
+```
+
+Just keep on mind to replace de tag image from the podman-compose-osticket.yml .
+
+To Connect to the database using a db client such as DBeaver.
+
+![1721142385734](image/README/1721142385734.png)
+
+## Contributing
 
 Feel free to modify and expand upon this template based on your specific setup and preferences.
