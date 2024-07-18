@@ -54,9 +54,11 @@ podman build -t <tag_name> .
 Just keep on mind to replace de tag image from the podman-compose-osticket.yml .
 
 To Connect to the database using a db client such as DBeaver.
-
 ![1721142385734](image/README/1721142385734.png)
 
+To setup the mariadb database on OsTicket on your browser at: http://localhost:8080/osTicket/setup/install.php
+
+![1721277102806](image/README/1721277102806.png)
 ## Contributing
 
 Feel free to modify and expand upon this template based on your specific setup and preferences.
