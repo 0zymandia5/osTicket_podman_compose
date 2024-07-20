@@ -3,6 +3,8 @@ services:
     mariadb:
       image: mariadb:latest
       container_name: mariadb
+      volumes:
+        - mariadb_data:/var/lib/mysql
       environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: osticket
@@ -11,12 +13,16 @@ services:
       ports:
         - "3307:3306"
       command: --bind-address=mariadb
-      # volumes:
-      #   - mariadb_data:/var/lib/mysql
-
+    
     osticket:
         image: eveanwarl0ck/osticket_1_18_x:0.1
+        container_name: osticket
+        volumes:
+          - osticket_data:/var/www/html/osTicket
         restart: always
         ports:
             - "8080:80"
+volumes:
+  mariadb_data:
+  osticket_data:
         
